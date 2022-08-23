@@ -29,7 +29,7 @@ function App() {
       <br />
       <br />
       {numbers && numbers.map(num => {
-        return <> <div id={`diagram_${num}`}>
+        return <> <div id={`diagram_${num}`} style={{ "background-color": '#fffff' }}>
           <div className="progress" >
             <div className="progress-bar" role="progressbar" style={{ width: `${num}%`, "background-color": '#57599F' }} aria-valuenow={num} aria-valuemin="0" aria-valuemax="100"></div>
           </div>
