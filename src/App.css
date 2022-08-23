@@ -32,7 +32,37 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.progress {
+  height: 25px;
+}
+
+.progress>svg {
+  height: 100%;
+  width: 100%;
+}
+
+.progress>svg .bg {
+  fill: lightgray;
+}
+
+.progress>svg .fill {
+  fill: red;
+}
+
+.progress>svg .unfilled-text {
+  fill: black;
+}
+
+.progress>svg .filled-text {
+  fill: white;
 }
