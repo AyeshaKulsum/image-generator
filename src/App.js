@@ -29,21 +29,21 @@ function App() {
 
   const downloadElement = async () => {
     console.log('hello');
-      numbers.forEach(num => {
-        var node = document.getElementById(`diagram_${num}`);
-        console.log(num, node)
-        htmlToImage.toBlob(node)
-          .then(function (blob) {
-            if (window.saveAs) {
-              console.log('hello', document.getElementById(`diagram_${num}`))
-              window.saveAs(blob, 'my-node.png');
-            }
-            else {
-              console.log('hello', document.getElementById(`diagram_${num}`))
-              FileSaver.saveAs(blob, "image.jpg");
-            }
-          }).catch((error) => console.log(error));
-      });
+    numbers.forEach(num => {
+      var node = document.getElementById(`diagram_${num}`);
+      console.log(num, node)
+      htmlToImage.toBlob(node)
+        .then(function (blob) {
+          if (window.saveAs) {
+            console.log('hello', document.getElementById(`diagram_${num}`))
+            window.saveAs(blob, 'my-node.png');
+          }
+          else {
+            console.log('hello', document.getElementById(`diagram_${num}`))
+            FileSaver.saveAs(blob, "image.jpg");
+          }
+        }).catch((error) => console.log(error));
+    });
   }
 
   return (
@@ -76,7 +76,7 @@ function App() {
       {numbers && numbers.map(num => {
         return <> <div id={`diagram_${num}`}>
           <div className="progress" >
-            <div className="progress-bar" role="progressbar" style={{ width: `${num}%` }} aria-valuenow={num} aria-valuemin="0" aria-valuemax="100"></div>
+            <div className="progress-bar" role="progressbar" style={{ width: `${num}%`, "background-color": '#57599F' }} aria-valuenow={num} aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </div>
           <br />
